@@ -1,0 +1,69 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Welcome to Varsha Enterprises</title>
+		 <h:outputStylesheet>
+        .red {
+            color: red;
+        }
+ 
+        .green {
+            color: green;
+        }
+    </h:outputStylesheet>
+</h:head>
+<h:body>
+	<ui:composition template="commonLayout.xhtml">
+		<ui:define name="main">
+		
+
+		<rich:panel header="Enquiry Form">
+	<h1><marquee bgcolor="#008894"><font color="#FFFFFF">WORKING HOURS: Monday - Saturday: 10 AM - 8 PM </font></marquee></h1>
+		<center>
+		<h:form id="registerForm">
+		 <rich:graphValidator value="#{emailServiceManagedBean}" id="gv">
+		<rich:panel header="Please Fill the Below Form :" style="width:300px">
+		 <rich:messages for="gv" />
+                <rich:messages globalOnly="true" />
+		
+        <h:panelGrid columns="2" >
+            <h:outputLabel value="Name:" />
+            <h:inputText id="name" value="#{emailServiceManagedBean.name}">
+                <rich:placeholder value="Please Enter Your Name..." />
+            </h:inputText>
+            <h:outputLabel value="Mobile Number:" />
+            <h:inputText id="mobileNumber" value="#{emailServiceManagedBean.mobileNumber}">
+                <rich:placeholder value="Please Enter Your Mobile Number..." />
+            </h:inputText>
+            <h:outputLabel value="Email Id :" />
+            <h:inputText id="emailId" value="#{emailServiceManagedBean.emailId}">
+                <rich:placeholder value="Please Enter Email Id..." />
+            </h:inputText>
+            <h:outputLabel value="Messages :" />
+            <h:inputTextarea id="messages1" value="#{emailServiceManagedBean.messages1}">
+                <rich:placeholder value="Please Enter Message Here..." />
+            </h:inputTextarea>
+            <h:outputLabel value="Address :" />
+            <h:inputTextarea id="address" value="#{emailServiceManagedBean.address}">
+                <rich:placeholder value="Please Enter Your Address..." />
+            </h:inputTextarea>
+            
+            <h:commandButton value="Submit" render="out" execute="@registerForm" actionListener="#{emailServiceManagedBean.action}" />
+        </h:panelGrid>
+        
+        
+    </rich:panel>
+    </rich:graphValidator>
+    </h:form>
+	</center>
+
+    </rich:panel>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

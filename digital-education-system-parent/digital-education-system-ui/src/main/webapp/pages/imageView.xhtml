@@ -1,0 +1,37 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+<meta charset="utf-8" />
+<meta name="title" content="Varsha Enterprises - Mineral Water Distributors" />
+<meta name="description" content="Varsha Enterprises - Mineral Water Distributors Near Fort Mumbai 400001" />
+<meta name="keywords" content="Varsha Enterprises, Mineral Water, Fort Mumbai, 400001 , help@varshaenterprises.info" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Varsha Enterprises - Mineral Water Distributors</title>
+</h:head>
+<h:body>
+	<ui:composition template="commonLayout.xhtml">
+		<ui:define name="main">
+			<rich:panel header="Varsha Enterprises Gallery">
+			<center>
+				<rich:panel header="Event Photos" style="width:750px;height=150px;background-color: #008894;">
+				<center>
+								<p:imageSwitch effect="zoom">
+    <ui:repeat value="#{imagesViewManagedBean.images}" var="image">
+        <p:graphicImage name="images/#{image}" style="width:500px;"/>
+    </ui:repeat>
+</p:imageSwitch>				</center>
+			</rich:panel>
+			</center>
+			</rich:panel>
+
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

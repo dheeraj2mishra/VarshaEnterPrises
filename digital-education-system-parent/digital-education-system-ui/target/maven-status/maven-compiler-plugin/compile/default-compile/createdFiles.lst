@@ -1,0 +1,17 @@
+com\digital\education\system\ui\managed\bean\OurTeamManagedBean.class
+com\digital\education\system\ui\managed\bean\HomeDeliveryManagedBean.class
+com\digital\education\system\ui\managed\bean\EmailServiceManagedBean.class
+com\digital\education\system\ui\managed\bean\EntityBBean.class
+com\digital\education\system\ui\managed\bean\PanelMenuBean.class
+com\digital\education\system\ui\managed\bean\RegisterManagedBean.class
+com\digital\education\system\ui\managed\bean\OfficeDeliveryManagedBean.class
+com\digital\education\system\ui\managed\bean\ContactUsManagedBean.class
+com\digital\education\system\ui\managed\bean\OurClientsManagedBean.class
+com\digital\education\system\ui\managed\bean\ModeOfPaymentManagedBean.class
+com\digital\education\system\ui\managed\bean\WaterServicesManagedBean.class
+com\digital\education\system\ui\managed\bean\AboutUsManagedBean.class
+com\digital\education\system\ui\managed\bean\LoginManagedBean.class
+com\digital\education\system\ui\managed\bean\ImagesViewManagedBean.class
+com\digital\education\system\rest\controller\EmailServiceController.class
+com\digital\education\system\ui\managed\bean\OtherChannelsManagedBean.class
+com\digital\education\system\ui\managed\bean\CoffieServicesManagedBean.class

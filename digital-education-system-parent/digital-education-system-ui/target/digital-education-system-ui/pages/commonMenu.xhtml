@@ -1,0 +1,79 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:p="http://primefaces.org/ui">
+<h:outputStylesheet>
+        .cols {
+            vertical-align: top;
+        }
+    </h:outputStylesheet>
+<h:body>
+	<ui:composition>
+		<h:form id="form">
+			<h:panelGrid columns="2" columnClasses="cols,cols" width="400">
+				<rich:panelMenu style="width:200px" itemMode="ajax" groupMode="ajax"
+					groupExpandedLeftIcon="triangleUp"
+					groupCollapsedLeftIcon="triangleDown"
+					topGroupExpandedRightIcon="chevronUp"
+					topGroupCollapsedRightIcon="chevronDown" itemLeftIcon="disc"
+					itemChangeListener="#{panelMenuBean.updateCurrent}">
+					<rich:panelMenuGroup label="Home">
+						<rich:panelMenuItem label="About Us" name="aboutUs" actionListener="#{aboutUsManagedBean.action}">
+						</rich:panelMenuItem>
+						<rich:panelMenuGroup label="Who We Serve">
+							<rich:panelMenuItem label="Home Delivery" name="homeDelivery" actionListener="#{homeDeliveryManagedBean.action}">
+						</rich:panelMenuItem>
+							<rich:panelMenuItem label="Office Delivery" name="officeDelivery" actionListener="#{officeDeliveryManagedBean.action}">
+						</rich:panelMenuItem>
+							<rich:panelMenuItem label="Other Channels" name="otherChannels" actionListener="#{otherChannelsManagedBean.action}">
+						</rich:panelMenuItem>
+						</rich:panelMenuGroup>
+						<rich:panelMenuItem label="Modes of Payment" name="modeOfPayment" actionListener="#{modeOfPaymentManagedBean.action}">
+						</rich:panelMenuItem>
+					</rich:panelMenuGroup>
+					<rich:panelMenuGroup label="Products">
+						<rich:panelMenuItem label="Bottled Water" name="bottledWater" actionListener="#{waterServicesManagedBean.action}">
+						</rich:panelMenuItem>
+						<rich:panelMenuItem label="Bislery" name="bislery" actionListener="#{waterServicesManagedBean.action}">
+						</rich:panelMenuItem>
+				</rich:panelMenuGroup>
+					<rich:panelMenuGroup label="Services">
+						<rich:panelMenuItem label="Bottled Water Delivery"
+							name="bottledWaterDelivery" actionListener="#{waterServicesManagedBean.action}">
+						</rich:panelMenuItem>
+					</rich:panelMenuGroup>
+						<rich:panelMenuGroup label="Our Clients">
+						<rich:panelMenuItem label="Our Clients" name="ourClients" actionListener="#{ourClientsManagedBean.action}">
+						</rich:panelMenuItem>
+					</rich:panelMenuGroup>
+					<rich:panelMenuGroup label="Team">
+						<rich:panelMenuItem label="Our Team" name="ourTeam" actionListener="#{ourTeamManagedBean.action}">
+						</rich:panelMenuItem>
+					</rich:panelMenuGroup>
+						<rich:panelMenuGroup label="Galary">
+						<rich:panelMenuItem label="Galary" name="galary" actionListener="#{imagesViewManagedBean.action}">
+						</rich:panelMenuItem>
+					</rich:panelMenuGroup>
+					<rich:panelMenuGroup label="Enquiry">
+						<rich:panelMenuItem label="Enquiry" name="customerRegister" actionListener="#{registerManagedBean.action}">
+						</rich:panelMenuItem>
+					</rich:panelMenuGroup>
+					<rich:panelMenuGroup label="Contact Us">
+						<rich:panelMenuItem label="Contact Us" name="contactUs" actionListener="#{contactUsManagedBean.action}">
+						</rich:panelMenuItem>
+					</rich:panelMenuGroup>
+				</rich:panelMenu>
+				  <!--  <a4j:outputPanel ajaxRendered="true">
+					<rich:panel rendered="#{not empty panelMenuBean.current}">
+						<h:outputText value="#{panelMenuBean.current} selected"
+							id="current" />
+					</rich:panel>
+				</a4j:outputPanel>-->
+			</h:panelGrid>
+		</h:form>
+	</ui:composition>
+</h:body>
+</html>

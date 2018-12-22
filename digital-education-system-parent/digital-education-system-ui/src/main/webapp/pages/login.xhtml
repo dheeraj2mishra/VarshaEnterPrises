@@ -1,0 +1,45 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Welcome to Varsha Enterprises</title>
+</h:head>
+<h:body>
+	<ui:composition template="commonLayout.xhtml">
+		<ui:define name="main">
+		<rich:panel header="Customer Login">
+	<h1><marquee bgcolor="#008894"><font color="#FFFFFF">WORKING HOURS: Monday - Saturday: 10 AM - 8 PM </font></marquee></h1>
+		<center>
+		<h:form id="loginForm">
+		<rich:graphValidator value="#{loginManagedBean}" id="gv">
+		<rich:panel header="Login" style="width:300px">
+				 <rich:messages for="gv" />
+                <rich:messages globalOnly="true" />
+
+        <h:panelGrid columns="2" >
+            <h:outputLabel value="User Name:" />
+            <h:inputText id="userName" value="#{loginManagedBean.userName}">
+                <rich:placeholder value="Please Enter User Name..." />
+            </h:inputText>
+            <h:outputLabel value="Password:" />
+            <h:inputSecret id="password" value="#{loginManagedBean.password}">
+                <rich:placeholder value="Please Enetr Password..." />
+            </h:inputSecret>
+            <h:commandButton value="Submit" render="out" execute="@loginForm" actionListener="#{loginManagedBean.login}" />
+			
+        </h:panelGrid>
+        
+    </rich:panel>
+    </rich:graphValidator>
+    </h:form>
+	</center>
+
+    </rich:panel>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

@@ -1,0 +1,4 @@
+com\digital\education\system\data\dao\impl\TestEntityDAO.class
+com\digital\education\system\data\dao\ITestEntityDAO.class
+com\digital\education\system\data\dao\model\TestEntity.class
+com\digital\education\system\data\dao\model\EmailModel.class
